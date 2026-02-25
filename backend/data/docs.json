@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Refund Policy",
+    "content": "Students or customers can request a full refund within 30 days of purchase if the service or product has not been used. Refund requests must be submitted through the official support portal. Approved refunds are processed within 5 to 7 business days."
+  },
+  {
+    "id": "2",
+    "title": "Password Reset",
+    "content": "Users can reset their account password from the account settings page under the security section. If a user forgets their password, they can use the Forgot Password option on the login page. A password reset link will be sent to the registered email address."
+  },
+  {
+    "id": "3",
+    "title": "Account Activation",
+    "content": "New user accounts must be activated using the verification link sent to the registered email address. The activation link is valid for 24 hours. If the link expires, users can request a new activation email."
+  },
+  {
+    "id": "4",
+    "title": "Course Enrollment",
+    "content": "Students can enroll in available courses through the dashboard after logging into their account. Enrollment is confirmed immediately upon successful payment. Course access remains active for the duration specified at the time of enrollment."
+  },
+  {
+    "id": "5",
+    "title": "Certificate Issuance",
+    "content": "Certificates are issued only after successful completion of all required modules and assessments. Once generated, certificates can be downloaded from the profile section. Certificate verification links are also provided."
+  },
+  {
+    "id": "6",
+    "title": "Support Contact",
+    "content": "Users can contact support by submitting a ticket through the help center. Support tickets are typically responded to within 24 to 48 hours. Urgent issues should be marked with high priority."
+  },
+  {
+    "id": "7",
+    "title": "Account Deletion",
+    "content": "Users may request permanent account deletion by contacting support. Account deletion requests are processed after identity verification. Once deleted, account data cannot be recovered."
+  }
+]

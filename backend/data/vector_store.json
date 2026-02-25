@@ -1,0 +1,128 @@
+[
+  {
+    "docId": "1",
+    "title": "Refund Policy",
+    "chunkId": "1-0",
+    "content": "Students or customers can request a full refund within 30 days of purchase if the service or product has not been used. Refund requests must be submitted through the official support portal. Approved refunds are processed within 5 to 7 business days.",
+    "embedding": [
+      0.083,
+      0.116,
+      0.117,
+      0.1,
+      0.101,
+      0.11,
+      0.116,
+      0.115,
+      0.032,
+      0.111
+    ]
+  },
+  {
+    "docId": "2",
+    "title": "Password Reset",
+    "chunkId": "2-0",
+    "content": "Users can reset their account password from the account settings page under the security section. If a user forgets their password, they can use the Forgot Password option on the login page. A password reset link will be sent to the registered email address.",
+    "embedding": [
+      0.085,
+      0.115,
+      0.101,
+      0.114,
+      0.115,
+      0.032,
+      0.099,
+      0.097,
+      0.11,
+      0.032
+    ]
+  },
+  {
+    "docId": "3",
+    "title": "Account Activation",
+    "chunkId": "3-0",
+    "content": "New user accounts must be activated using the verification link sent to the registered email address. The activation link is valid for 24 hours. If the link expires, users can request a new activation email.",
+    "embedding": [
+      0.078,
+      0.101,
+      0.119,
+      0.032,
+      0.117,
+      0.115,
+      0.101,
+      0.114,
+      0.032,
+      0.097
+    ]
+  },
+  {
+    "docId": "4",
+    "title": "Course Enrollment",
+    "chunkId": "4-0",
+    "content": "Students can enroll in available courses through the dashboard after logging into their account. Enrollment is confirmed immediately upon successful payment. Course access remains active for the duration specified at the time of enrollment.",
+    "embedding": [
+      0.083,
+      0.116,
+      0.117,
+      0.1,
+      0.101,
+      0.11,
+      0.116,
+      0.115,
+      0.032,
+      0.099
+    ]
+  },
+  {
+    "docId": "5",
+    "title": "Certificate Issuance",
+    "chunkId": "5-0",
+    "content": "Certificates are issued only after successful completion of all required modules and assessments. Once generated, certificates can be downloaded from the profile section. Certificate verification links are also provided.",
+    "embedding": [
+      0.067,
+      0.101,
+      0.114,
+      0.116,
+      0.105,
+      0.102,
+      0.105,
+      0.099,
+      0.097,
+      0.116
+    ]
+  },
+  {
+    "docId": "6",
+    "title": "Support Contact",
+    "chunkId": "6-0",
+    "content": "Users can contact support by submitting a ticket through the help center. Support tickets are typically responded to within 24 to 48 hours. Urgent issues should be marked with high priority.",
+    "embedding": [
+      0.085,
+      0.115,
+      0.101,
+      0.114,
+      0.115,
+      0.032,
+      0.099,
+      0.097,
+      0.11,
+      0.032
+    ]
+  },
+  {
+    "docId": "7",
+    "title": "Account Deletion",
+    "chunkId": "7-0",
+    "content": "Users may request permanent account deletion by contacting support. Account deletion requests are processed after identity verification. Once deleted, account data cannot be recovered.",
+    "embedding": [
+      0.085,
+      0.115,
+      0.101,
+      0.114,
+      0.115,
+      0.032,
+      0.109,
+      0.097,
+      0.121,
+      0.032
+    ]
+  }
+]
