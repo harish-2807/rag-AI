@@ -275,4 +275,5 @@ ${historyText}`;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`🔗 CORS origins: https://rainbow-biscuit-c5c09d.netlify.app, http://localhost:3000, http://127.0.0.1:60123`);
+  console.log(`📅 Started at: ${new Date().toISOString()}`);
 });
