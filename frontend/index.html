@@ -276,7 +276,8 @@
 
     <script>
         const API_BASE_URL = 'https://rag-ai-4aql.onrender.com';
-        
+        const FALLBACK_API_URL = 'http://localhost:3000';
+
         // Ensure page is served over HTTPS if available
         if (location.protocol === 'http:' && location.hostname !== 'localhost') {
             location.replace(`https:${location.href.substring(5)}`);
@@ -351,7 +352,7 @@
                 console.log('Sending request to:', `${API_BASE_URL}/api/chat`);
                 console.log('Request body:', JSON.stringify({ sessionId, message }, null, 2));
                 
-                const response = await fetch(`${API_BASE_URL}/api/chat`, {
+                let response = await fetch(`${API_BASE_URL}/api/chat`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -364,6 +365,21 @@
 
                 console.log('Response status:', response.status);
                 console.log('Response headers:', response.headers);
+
+                // If CORS blocks, try local fallback
+                if (!response.ok && response.type === 'opaque') {
+                    console.warn('CORS blocked, trying local fallback...');
+                    response = await fetch(`${FALLBACK_API_URL}/api/chat`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            sessionId: sessionId,
+                            message: message
+                        })
+                    });
+                }
 
                 if (!response.ok) {
                     const errorText = await response.text();
