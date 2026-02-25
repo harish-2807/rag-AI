@@ -23,7 +23,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors({
     origin: ['https://rainbow-biscuit-c5c09d.netlify.app', 'http://localhost:3000'],
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
