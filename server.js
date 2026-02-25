@@ -27,7 +27,20 @@ app.use(cors({
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 app.use(express.json());
+
+// Explicit preflight handler
+app.options('*', (req, res) => {
+  const origin = req.headers.origin;
+  if (['https://rainbow-biscuit-c5c09d.netlify.app', 'http://localhost:3000', 'http://127.0.0.1:60123'].includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.send(204);
+});
 
 const frontendPath = path.join(__dirname, 'frontend');
 app.use(express.static(frontendPath));
