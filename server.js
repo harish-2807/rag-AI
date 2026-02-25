@@ -22,12 +22,27 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: ['https://rainbow-biscuit-c5c09d.netlify.app', 'http://localhost:3000'],
+    origin: ['https://rainbow-biscuit-c5c09d.netlify.app', 'http://localhost:3000', 'http://127.0.0.1:60123'],
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
+
+const frontendPath = path.join(__dirname, 'frontend');
+app.use(express.static(frontendPath));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
+app.get('/review', (req, res) => {
+  res.redirect('/');
+});
 
 // ---------- LOAD DOCS ----------
 const docsPath = path.join(__dirname, 'backend', 'data', 'docs.json');
@@ -155,6 +170,7 @@ app.post('/api/retrieve', async (req, res) => {
 });
 
 app.post('/api/chat', async (req, res) => {
+  console.log('Incoming request body:', req.body);
   const { sessionId, message } = req.body;
 
   if (!sessionId || !message) {
