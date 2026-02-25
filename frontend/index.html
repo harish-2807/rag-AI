@@ -277,6 +277,11 @@
     <script>
         const API_BASE_URL = 'https://rag-ai-4aql.onrender.com';
         
+        // Ensure page is served over HTTPS if available
+        if (location.protocol === 'http:' && location.hostname !== 'localhost') {
+            location.replace(`https:${location.href.substring(5)}`);
+        }
+        
         let sessionId = localStorage.getItem('sessionId');
         if (!sessionId) {
             sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
