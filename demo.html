@@ -278,7 +278,7 @@
     </div>
 
     <script>
-        const API_BASE_URL = 'https://cors-anywhere.herokuapp.com/https://rag-ai-4aql.onrender.com/api/chat';
+        const API_BASE_URL = 'https://api.allorigins.win/raw?url=https://rag-ai-4aql.onrender.com/api/chat';
 
         // Ensure page is served over HTTPS if available
         if (location.protocol === 'http:' && location.hostname !== 'localhost') {
@@ -371,9 +371,12 @@
 
                 const data = await response.json();
                 console.log('Response data:', data);
+
+                // Handle proxy wrapper
+                const parsed = data.contents ? JSON.parse(data.contents) : data;
                 
-                const info = `${data.retrievedChunks} chunks, ${data.tokensUsed} tokens`;
-                addMessage(data.reply, 'assistant', info);
+                const info = `${parsed.retrievedChunks} chunks, ${parsed.tokensUsed} tokens`;
+                addMessage(parsed.reply, 'assistant', info);
 
             } catch (error) {
                 console.error('Error:', error);
