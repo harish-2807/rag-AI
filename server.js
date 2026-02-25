@@ -146,7 +146,8 @@ app.get('/health', (req, res) => {
     status: 'OK',
     docsLoaded: documents.length,
     timestamp: new Date().toISOString(),
-    version: '1.0.1'
+    version: '1.0.2',
+    corsOrigins: ['https://rainbow-biscuit-c5c09d.netlify.app', 'http://localhost:3000', 'http://127.0.0.1:60123']
   });
 });
 
